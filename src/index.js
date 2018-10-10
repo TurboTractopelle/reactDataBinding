@@ -28,7 +28,6 @@ class App extends Component {
     this.setState(prevState => ({
       [InputTarget]: { ...prevState[InputTarget], content: content }
     }));
-    //console.log(this.state.firstName);
   };
 
   composeChange = e => {

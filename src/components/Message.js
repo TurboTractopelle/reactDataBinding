@@ -11,7 +11,7 @@ const Message = ({ firstName, firstNameError, lastName, lastNameError }) => {
         <span className={lastNameError ? "green" : "red"}>lastName:</span>{" "}
         {lastName}
       </p>
-      <p>At lest 3 caracters for each</p>
+      <p>At lest 3 letters for each</p>
     </div>
   );
 };
