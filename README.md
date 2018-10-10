@@ -1,2 +1,0 @@
-# reactDataBinding
-Created with CodeSandbox
