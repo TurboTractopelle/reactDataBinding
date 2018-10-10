@@ -14,23 +14,25 @@ class App extends Component {
 
   validInput = e => {
     let InputTarget = e.target.name;
-    let obj = this.state[InputTarget];
+    console.log();
     const regexp = /[A-Za-z]{3,}/;
-    this.setState({
-      [InputTarget]: { ...obj, error: regexp.test(e.target.value) }
-    });
-    console.log(obj);
+    const test = regexp.test(e.target.value);
+    this.setState(prevState => ({
+      [InputTarget]: { ...prevState[InputTarget], error: test }
+    }));
   };
 
   changeInput = e => {
     let InputTarget = e.target.name;
-    let obj = this.state[InputTarget];
-    this.setState({ [InputTarget]: { ...obj, content: e.target.value } });
+    const content = e.target.value;
+    this.setState(prevState => ({
+      [InputTarget]: { ...prevState[InputTarget], content: content }
+    }));
     //console.log(this.state.firstName);
   };
 
   composeChange = e => {
-    //this.changeInput(e);
+    this.changeInput(e);
     this.validInput(e);
   };
 

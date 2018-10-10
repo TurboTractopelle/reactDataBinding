@@ -3,10 +3,15 @@ import React from "react";
 const Message = ({ firstName, firstNameError, lastName, lastNameError }) => {
   return (
     <div>
-      <span className={firstNameError ? "green" : "red"}>firstName:</span>{" "}
-      {firstName}
-      <span className={lastNameError ? "green" : "red"}>lastName:</span>{" "}
-      {lastName}
+      <p>
+        <span className={firstNameError ? "green" : "red"}>firstName:</span>{" "}
+        {firstName}
+      </p>
+      <p>
+        <span className={lastNameError ? "green" : "red"}>lastName:</span>{" "}
+        {lastName}
+      </p>
+      <p>At lest 3 caracters for each</p>
     </div>
   );
 };
